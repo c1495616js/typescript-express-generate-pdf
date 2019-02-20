@@ -1,3 +1,5 @@
+All credit from https://github.com/AmirTugi/tea-school
+
 ## Install
 ```
 npm i
