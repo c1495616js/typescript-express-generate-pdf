@@ -1,272 +1,65 @@
 // Use !{var} to use unescaped conent
 style(type="text/css") !{compiledStyle}
 
-h1.title Invoice number ##{invoice.id}
 
-p.created-at #{invoice.createdAt}
 
-h3 For: #{invoice.customer.name}
-
-table
-    thead
-        tr
-            th #
-            th Item
-            th Price
+table.ui.bottom.attached.table.border  
     tbody
-        each line in invoice.lines
-            tr
-                td #{line.id}
-                td #{line.item}
-                td #{line.price}
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-h3 For: #{invoice.customer.name}
-
-table
-    thead
         tr
-            th #
-            th Item
-            th Price
-    tbody
-        each line in invoice.lines
-            tr
-                td #{line.id}
-                td #{line.item}
-                td #{line.price}
+            td 
+                p.label Dam:
+                p.text SEVEN DAM
+                div.ui.divider
+                p.label Dam:
+                p.text SEVEN DAM
+            td 
+                p.label Dam:
+                p.text SEVEN DAM
+                div.ui.divider
+                p.label Dam:
+                p.text SEVEN DAM
+            td 
+                p.label Dam:
+                p.text SEVEN DAM
+                div.ui.divider
+                p.label Dam:
+                p.text SEVEN DAM
 
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
+            //- section header
+        tr.section-header
+            td(colspan=3) section 1
+            //- text field
+        tr.text-field
+            td.border-bottom(colspan=3)
+                p.label textfield name
+                p.text Lorem
+            //- text area
+        tr.text-area
+            td.border-bottom(colspan=3)
+                p.label text area name
+                p.text Lorem
+                div.ui.divider
+                label.label latitude:
+                    span.text 193
+                label.label(style={'margin-left': '59px'}) longtitude:
+                    span.text 193
+            //- numerical value
+        tr.numerical
+            td.border-bottom(colspan=3)
+                div
+                    p.label(style={'float':'left'}) Numerical Value
+                    p.text(style={'float':'right'}) 24
+                div(style={'clear':'both'})
+                    p.label comment xxx
+            //- radio button question
+        tr.radio
+            td.border-bottom(colspan=3)
+                div
+                    p.label(style={'float':'left'}) Radio Button Question:                    
+                    div.ui.radio.checkbox(style={'float':'right','font-size':'9px'})
+                        input(type='radio' checked=true)
+                        label.text.radio-label 24                   
+                div.ui.divider
+                div(style={'clear':'both'})
+                    p.label comment xxx
 
-h3.comments-title Comments
-p #{invoice.comments}
-
-h3 For: #{invoice.customer.name}
-
-table
-    thead
-        tr
-            th #
-            th Item
-            th Price
-    tbody
-        each line in invoice.lines
-            tr
-                td #{line.id}
-                td #{line.item}
-                td #{line.price}
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-h3 For: #{invoice.customer.name}
-
-table
-    thead
-        tr
-            th #
-            th Item
-            th Price
-    tbody
-        each line in invoice.lines
-            tr
-                td #{line.id}
-                td #{line.item}
-                td #{line.price}
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-h3 For: #{invoice.customer.name}
-
-table
-    thead
-        tr
-            th #
-            th Item
-            th Price
-    tbody
-        each line in invoice.lines
-            tr
-                td #{line.id}
-                td #{line.item}
-                td #{line.price}
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-h3 For: #{invoice.customer.name}
-
-table
-    thead
-        tr
-            th #
-            th Item
-            th Price
-    tbody
-        each line in invoice.lines
-            tr
-                td #{line.id}
-                td #{line.item}
-                td #{line.price}
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-h3 For: #{invoice.customer.name}
-
-table
-    thead
-        tr
-            th #
-            th Item
-            th Price
-    tbody
-        each line in invoice.lines
-            tr
-                td #{line.id}
-                td #{line.item}
-                td #{line.price}
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-h3 For: #{invoice.customer.name}
-
-table
-    thead
-        tr
-            th #
-            th Item
-            th Price
-    tbody
-        each line in invoice.lines
-            tr
-                td #{line.id}
-                td #{line.item}
-                td #{line.price}
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-h3 For: #{invoice.customer.name}
-
-table
-    thead
-        tr
-            th #
-            th Item
-            th Price
-    tbody
-        each line in invoice.lines
-            tr
-                td #{line.id}
-                td #{line.item}
-                td #{line.price}
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-h3 For: #{invoice.customer.name}
-
-table
-    thead
-        tr
-            th #
-            th Item
-            th Price
-    tbody
-        each line in invoice.lines
-            tr
-                td #{line.id}
-                td #{line.item}
-                td #{line.price}
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-h3 For: #{invoice.customer.name}
-
-table
-    thead
-        tr
-            th #
-            th Item
-            th Price
-    tbody
-        each line in invoice.lines
-            tr
-                td #{line.id}
-                td #{line.item}
-                td #{line.price}
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}
-
-
-div.table-footer Shipping: $#{invoice.shipping}
-div.table-footer total: $#{invoice.total}
-
-h3.comments-title Comments
-p #{invoice.comments}

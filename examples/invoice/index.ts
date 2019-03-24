@@ -4,13 +4,22 @@ import * as path from 'path';
 import {PDFOptions} from 'puppeteer';
 import {Options as SassOptions} from 'node-sass';
 import express from 'express';
+import data from './data';
+
+
 const app: express.Application = express();
 
+app.get('/page', () => {
+    
+})
+
 app.get('/', async (req: express.Request, res: express.Response) => {
-    await toPdf();
+    // await toPdf();
     // res.sendFile will open directly in browser
     // res.download will download file
-    res.download(path.resolve(__dirname, './output/invoice.pdf'));    
+    // res.download(path.resolve(__dirname, './output/invoice.pdf'));
+    await toPdf();
+    res.sendFile(path.resolve(__dirname, './output/invoice.pdf'));   
 })
 
 app.listen(1234, () => {
@@ -36,28 +45,7 @@ const toPdf = async () => {
     /********************************
      *        TEMPLATE OPTIONS      *
      ********************************/
-    const htmlTemplateOptions: pug.LocalsObject = {
-        invoice: {
-            id: 2452,
-            createdAt: '2018-10-12',
-            customer: { name: 'International Bank of Blueprintya'},
-            shipping: 10,
-            total: 104.95,
-            comments: 'Do not feed him fish',
-            lines: [
-                {
-                    id: 1,
-                    item: 'Test Jerry2',
-                    price: '52.43',
-                },
-                {
-                    id: 2,
-                    item: 'Not so good toaster',
-                    price: '11.62',
-                },
-            ]
-        },
-    };
+    const htmlTemplateOptions: pug.LocalsObject = {data};
 
     /********************************
      *        PDF FILE OPTIONS      *
@@ -69,6 +57,7 @@ const toPdf = async () => {
         format: 'A4',
         displayHeaderFooter: true,
         headerTemplate: `<div style="font-size:30px;color:red"><img width="120" src="${src}" /></div>`,
+        printBackground: true,
         margin: { top: '90', bottom: '40' },
         footerTemplate: '<h1>Test Footer</h1>'
     };
