@@ -1,0 +1,9 @@
+mixin numerical(title, value, comment)
+  tr.numerical
+    td.border-bottom(colspan=3)
+      div
+        p.label(style={'float':'left'}) #{title}:
+        p.text(style={'float':'right'}) #{value}
+      div(style={'clear':'both'})
+        p.label Comment: 
+          span(style={'font-style':'italic'}) #{comment}

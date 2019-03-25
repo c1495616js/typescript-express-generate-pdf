@@ -1,0 +1,10 @@
+mixin radio(title, value)
+  tr.radio
+      td.border-bottom(colspan=3)
+        div
+          p.label(style={'float':'left'}) #{title}:                    
+          div.ui.radio.checkbox(style={'float':'right','font-size':'9px'})
+            input(type='radio' checked=true)
+            label.text.radio-label #{value}                   
+        div.ui.divider
+        div(style={'clear':'both'})

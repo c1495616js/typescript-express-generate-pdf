@@ -1,0 +1,30 @@
+// Use !{var} to use unescaped conent
+style(type="text/css") !{compiledStyle}
+//- mixins
+include components/basic.pug
+    //- section header
+include components/header.pug
+    //- text field
+include components/textfield.pug
+include components/textarea.pug
+    //- numerical value
+include components/numerical.pug
+    //- radio button question
+include components/radio.pug
+    //- Dropdown, yes no question
+include components/dropdown.pug
+    //- checkbox
+include components/checkbox.pug
+    //- custom-field
+include componets/custom.pug
+
+table.ui.bottom.attached.table.border  
+    tbody
+        //- basic data
+        +basic('dam')
+        //- start here
+            
+        
+
+
+            

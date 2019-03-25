@@ -1,0 +1,13 @@
+mixin checkbox(title)
+  tr.checkbox
+    td.border-bottom(colspan=3)
+      div
+        p.label(style={'float':'left'}) #{title}:
+        div(style={'float':'right', 'font-size':'9px'})
+          //- for loop
+          div.ui.checked.checkbox.block
+              input.checkbox-input(type="checkbox" checked=true)
+              label.text.checkbox-label value2
+          div.ui.checked.checkbox.block
+              input.checkbox-input(type="checkbox" checked=true)
+              label.text.checkbox-label value2
