@@ -1,38 +1,19 @@
 // Use !{var} to use unescaped conent
 style(type="text/css") !{compiledStyle}
-
+//- mixins
+include components/basic.pug
+    //- section header
+include components/header.pug
+include components/textfield.pug
 
 
 table.ui.bottom.attached.table.border  
     tbody
-        tr
-            td 
-                p.label Dam:
-                p.text SEVEN DAM
-                div.ui.divider
-                p.label Dam:
-                p.text SEVEN DAM
-            td 
-                p.label Dam:
-                p.text SEVEN DAM
-                div.ui.divider
-                p.label Dam:
-                p.text SEVEN DAM
-            td 
-                p.label Dam:
-                p.text SEVEN DAM
-                div.ui.divider
-                p.label Dam:
-                p.text SEVEN DAM
-
-            //- section header
-        tr.section-header
-            td(colspan=3) section 1
+        //- basic data
+        +basic('dam')
+      
             //- text field
-        tr.text-field
-            td.border-bottom(colspan=3)
-                p.label textfield name
-                p.text Lorem
+        +textfield('title', 'value')
             //- text area
         tr.text-area
             td.border-bottom(colspan=3)
@@ -61,5 +42,45 @@ table.ui.bottom.attached.table.border
                         label.text.radio-label 24                   
                 div.ui.divider
                 div(style={'clear':'both'})
-                    p.label comment xxx
+            //- Dropdown, yes no question
+        tr.dropdown.yes-no
+            td.border-bottom(colspan=3)
+                div
+                    p.label(style={'float':'left'}) Dropdown List:
+                    p.text(style={'float':'right'}) Option 3
+            //- checkbox
+        tr.checkbox
+            td.border-bottom(colspan=3)
+                div
+                    p.label(style={'float':'left'}) Checkbox:
+                    div(style={'float':'right', 'font-size':'9px'})
+                        //- for loop
+                        div.ui.checked.checkbox.block
+                            input.checkbox-input(type="checkbox" checked=true)
+                            label.text.checkbox-label value2
+                        div.ui.checked.checkbox.block
+                            input.checkbox-input(type="checkbox" checked=true)
+                            label.text.checkbox-label value2
+            //- custom-field
+        tr.custom-field
+            td.border-bottom(colspan=3)
+                div
+                    p.label(style={'float':'left'}) Custom field question:
+                    p.text(style={'float':'left'}) Type name:
+                    div(style={'float':'right', 'font-size':'9px'})
+                        //- for loop
+                        div.ui.input.block
+                            div.ui.label.basic.text.custom-field--label R1
+                            input(type="text" value="test")
+                            div.ui.label.basic.text.custom-field--label Value
+                        div.ui.input.block
+                            div.ui.label.basic.text.custom-field--label R1
+                            input(type="text" value="test")
+                            div.ui.label.basic.text.custom-field--label Value
+                        //- 
+                    div(style={'clear':'both'}) 
+                        span.label Commment: 
+                        span.label(style={'font-style':'italic'}) oifjsoj
 
+
+            

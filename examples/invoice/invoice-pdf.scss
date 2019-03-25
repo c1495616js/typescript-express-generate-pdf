@@ -59,3 +59,42 @@ body {
     background: $main-color !important;    
   }
 }
+
+.checkbox-label {
+  height: 10px;	
+  font-size:9px !important;	
+  line-height: 10px;    
+
+  &:before { 
+    width:9px !important;   
+    height:9px !important;   
+    background: black !important;
+    border-color: black !important;
+  }
+  &:after {
+    width:9px !important;   
+    height:9px !important;
+    font-size:7px !important;      
+    color: $section-title-color !important;    
+  }
+}
+
+.checkbox-input {
+  &:checked {
+    color: white;
+  }
+}
+
+
+// custom field
+
+.custom-field--label {
+  border: none !important;
+  font-size: 9px !important;
+  line-height: 17px !important;
+  font-weight: normal !important;
+}
+
+.block {
+  display: block !important;
+}

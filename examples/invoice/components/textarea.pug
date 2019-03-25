@@ -1,0 +1,10 @@
+mixin textarea(title, value, lat, long)
+  tr.text-area
+    td.border-bottom(colspan=3)
+      p.label #{title}:
+      p.text #{value}
+      div.ui.divider
+      label.label Latitude:
+        span.text #{lat}
+      label.label(style={'margin-left': '59px'}) Longtitude:
+        span.text #{long}
